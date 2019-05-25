@@ -6,4 +6,4 @@ before_install:
   - docker build -t apshuk17/docker-angular -f Dockerfile.dev .
 
 script:
-  - docker run apshuk17/docker-angular npm run coverage
+  - docker run apshuk17/docker-angular npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
