@@ -1,0 +1,12 @@
+# Base image download
+FROM node:10-alpine
+
+WORKDIR /app
+
+# Install dependencies
+COPY package.json .
+RUN npm install
+COPY . .
+
+# Command
+CMD ["npm", "start"]
