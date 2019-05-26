@@ -8,6 +8,7 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
+      require('karma-firefox-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -33,7 +34,8 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    singleRun: false
+    browserDisconnectTimeout: 10000,
+    browserNoActivityTimeout: 30000
   });
   // if(process.env.TRAVIS){
   //   config.browsers = ['Chrome_travis_ci'];
