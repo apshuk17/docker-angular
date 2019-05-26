@@ -7,6 +7,9 @@ node_js:
 services:
   - docker
 
+addons:
+  firefox: latest
+
 # addons:
 # apt:
 #   sources:
