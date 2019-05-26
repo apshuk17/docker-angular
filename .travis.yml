@@ -27,4 +27,4 @@ before_script:
   - docker build -t apshuk17/docker-angular -f Dockerfile.dev .
 
 script:
-  - docker run apshuk17/docker-angular npm run start
+  - docker run apshuk17/docker-angular npm run coverage
