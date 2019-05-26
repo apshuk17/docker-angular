@@ -1,23 +1,23 @@
 sudo: required
 dist: trusty
-# language: node_js
-# node_js:
-#   - '7.7.4'
+language: node_js
+node_js:
+  - 0.8
 
 services:
   - docker
 
-addons:
-apt:
-  sources:
-    - google-chrome
-  packages:
-    - google-chrome-stable
+# addons:
+# apt:
+#   sources:
+#     - google-chrome
+#   packages:
+#     - google-chrome-stable
 
 before_script:
-  - "export CHROME_BIN=chromium-browser"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+  # - "export CHROME_BIN=chromium-browser"
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
   - docker build -t apshuk17/docker-angular -f Dockerfile.dev .
 
 script:

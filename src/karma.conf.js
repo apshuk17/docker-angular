@@ -21,13 +21,13 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Chrome'],
-    customLaunchers: {
-      Chrome_travis_ci: {
-          base: 'Chrome',
-          flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['Firefox'],
+    // customLaunchers: {
+    //   Chrome_travis_ci: {
+    //       base: 'Chrome',
+    //       flags: ['--no-sandbox']
+    //   }
+    // },
     singleRun: true,
     port: 9876,
     colors: true,
@@ -35,7 +35,7 @@ module.exports = function (config) {
     autoWatch: true,
     singleRun: false
   });
-  if(process.env.TRAVIS){
-    config.browsers = ['Chrome_travis_ci'];
-  }
+  // if(process.env.TRAVIS){
+  //   config.browsers = ['Chrome_travis_ci'];
+  // }
 };

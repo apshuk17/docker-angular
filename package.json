@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "coverage": "ng test --watch false --browsers ChromeHeadless"
+    "coverage": "./node_modules/.bin/karma start --browsers Firefox --single-run"
   },
   "private": true,
   "dependencies": {
