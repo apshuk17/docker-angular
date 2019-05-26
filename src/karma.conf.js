@@ -21,13 +21,13 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['Chrome'],
+    // customLaunchers: {
+    //   ChromeHeadlessNoSandbox: {
+    //     base: 'Chrome',
+    //     flags: ['--no-sandbox']
+    //   }
+    // },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
