@@ -21,14 +21,22 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
+    files: ['app/app.component.spec.ts'],
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Firefox', 'FirefoxDeveloper'],
-    // customLaunchers: {
-    //   Chrome_travis_ci: {
-    //       base: 'Chrome',
-    //       flags: ['--no-sandbox']
-    //   }
-    // },
+    browsers: ['Chrome'],
+    customLaunchers: {
+      Headless_Firefox: {
+        base: 'Firefox',
+        flags: []
+      },
+      Headless_Chrome: {
+        base: 'Chrome',
+        flags: [
+          '--no-sandbox',
+          '--disable-gpu'
+        ]
+      }
+    },
     singleRun: true,
     port: 9876,
     colors: true,
