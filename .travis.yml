@@ -23,4 +23,4 @@ before_script:
   - docker build -t apshuk17/docker-angular -f Dockerfile.dev .
 
 script:
-  - docker run apshuk17/docker-angular ng test --single-run
+  - docker run apshuk17/docker-angular npm run test --single-run
