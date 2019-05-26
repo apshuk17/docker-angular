@@ -8,9 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "coverage": "ng test --watch=false --browsers=Firefox",
-    "test:ci": "ng test --browser=Headless_Chrome --code-coverage=true --single-run=true",
-    "test:xvfb": "xvfb-run npm run test:ci"
+    "coverage": "ng test --browser=Headless_Firefox --code-coverage=true --single-run=true"
   },
   "private": true,
   "dependencies": {

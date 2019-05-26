@@ -23,7 +23,7 @@ module.exports = function (config) {
     },
     files: ['app/app.component.spec.ts'],
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Chrome'],
+    browsers: ['Firefox', 'FirefoxDeveloper', 'FirefoxAurora', 'FirefoxNightly'],
     customLaunchers: {
       Headless_Firefox: {
         base: 'Firefox',
