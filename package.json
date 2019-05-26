@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "coverage": "./node_modules/.bin/karma start --no-browsers"
+    "coverage": "ng test --watch=false --no-browsers"
   },
   "private": true,
   "dependencies": {
